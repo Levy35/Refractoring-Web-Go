@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Music Database</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+ 
+  
+</head>
+<body>
+  <h1>Music Artist</h1>
+  <table class>
+    <tr>
+      <th>Info</th>
+    </tr>
+  </table>
+  <br/>
+  <div>
+    <form action="/info-add" method = "POST" >  
+
+  <div>
+      <label>Full Name:</label>
+      {{ with .ErrorsFromForm.full_name }}
+       <label class= "error"> {{ . }} </label>
+       {{end}}
+      <input type="text" name="full_name" value="{{ .FormData.Get  "full_name"}}"> 
+  </div>
+<br/>
+  <div>
+      <label>Album:</label>
+      {{ with .ErrorsFromForm.album }}
+       <label class= "error"> {{ . }} </label>
+       {{end}}
+      <input type="text" name="album" value="{{ .FormData.Get  "album"}}">
+  </div>
+<br/>
+  <div>     
+      <label>Date Released:</label>
+      {{ with .ErrorsFromForm.date_released }}
+       <label class= "error"> {{ . }} </label>
+       {{end}}
+      <input type="text" name="date_released" value="{{ .FormData.Get  "date_released"}}">
+  </div>
+<br/>
+  <div>
+      <label>Genre:</label>
+      {{ with .ErrorsFromForm.genre }}
+       <label class= "error"> {{ . }} </label>
+       {{end}}
+      <input type="text" name="genre" value="{{ .FormData.Get  "genre"}}">
+  </div>
+<br/>
+  <div>
+      <label>Artist:</label>
+      {{ with .ErrorsFromForm.artist }}
+       <label class= "error"> {{ . }} </label>
+       {{end}}
+      <input type="text" name="artist" value="{{ .FormData.Get  "artist"}}">
+  </div>
+<br/>
+      <input type="submit" value="Submit">
+    </form>
+
+
+    <br><br>
+
+  </div>
+  <hr>
+  <hr>
+<footer>
+    <p>
+      <a href="mailto:2021155034@ub.edu.bz">2021155034@ub.edu.bz</a>
+    </p>
+    <p>
+      <a href="mailto:2018118526@ub.edu.bz">2018118526@ub.edu.bz</a>
+    </p>
+  </footer>
+</body>
+</html>

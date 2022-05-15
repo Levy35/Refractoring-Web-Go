@@ -1,0 +1,39 @@
+<head>
+    <title>Listing</title>
+</head>
+<body>  
+    <h2>List of Musicians</h2>
+
+    {{ if .MusicInfo }}
+    {{range .MusicInfo }}
+    <ul>
+        
+        <strong>--{{ .Full_name }}</strong>
+        <br>
+        <strong>--{{ .Album }}</strong>
+        <br>
+        <strong>--{{ .Date_released }}</strong>
+        <br>
+        <strong>--{{ .Genre }}</strong>
+        <br>
+        <strong>--{{ .Artist }}</strong>
+    </ul>
+    {{end}}
+    {{else}}
+    <p>Nothing to see here. Move along...</p>
+    {{end}}
+
+    <a mimetype= "text/plain" href = "/">Click here to go to Home Page</a>
+    <br>
+    <a mimetype= "text/plain" href = "/info">Click here to go to web form</a>
+
+    <hr>
+<footer>
+    <p>
+      <a href="mailto:2021155034@ub.edu.bz">2021155034@ub.edu.bz</a>
+    </p>
+    <p>
+      <a href="mailto:2018118526@ub.edu.bz">2018118526@ub.edu.bz</a>
+    </p>
+  </footer>
+</body></html>
